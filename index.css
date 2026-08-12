@@ -1,23 +1,35 @@
 :root{
-    --navy-blue: #1B244A;
-    --light-red: #F94F6D;
-    --periwinkle: #9AABD8;
-    --led-yellow: #F9D030;
-    --yale-blue: #105173;
-    --emerald: #10B981;
-    --dark-slate: #1F2937;
-    --dark-blue-gray: #2F3E53;
-    --mint-gray: #ECFDF5;
-    --medium-spring-cyan: #4ADF86;
-    --light-blue-gray: #A1B4CC;
-    --steel-blue: #4F627C;
+    --text-color-green: #10B981; /*emerald:*/
+    --bg-color-body: #1F2937; /* dark-slate */
+    --bg-color-main: #2F3E53; /*dark-blue-gray*/
+    --text-color-ligth: #ECFDF5; /*--mint-gray:*/
+    --main-text-color: #4ADF86;/* --spring-green */
+    --sec-text: #808080;
+    --bg-color-input: #273549;/* deep navy or slate blue color*/
+    --text-color-input: #55F991; /* bright shade of light green*/
+    --text-color-btn: #10B981; /*emerald:*/
+
 
 }
+
+.ligth-theme {
+    --bg-color-body: white;
+    --bg-color-main: #ECFDF5; /*mint green or grayish cyan*/
+    --text-color-green: #0C090A; /*nigth:* */
+    --text-color-ligth: #10B981; /*--night color:*/
+    --main-text-color: #4ADF86;/* --spring-green */
+    --sec-text:#6B7280;
+    --bg-color-input: #273549;/* deep navy or slate blue color*/
+    --text-color-input: #55F992; /* green with a high intensity*/
+    --text-color-btn: #10B981; /*emerald:*/
+
+}
+
 
 .flex-column-container {
     margin: 50px auto;
     text-align: center;
-    background-color: var(--dark-blue-gray);
+    background-color: var(--bg-color-main);
     width: 600px;
     min-width: 500px;
     max-width: 900px;
@@ -32,7 +44,7 @@
 body {
     margin: 0;
     text-align: center;
-    background-color: var(--dark-slate);
+    background-color: var(--bg-color-body);
 }
 
 .flex-row-container {
@@ -43,41 +55,45 @@ body {
     align-items: flex-start;
 }
 
-
-#main-text-word {
-    font-size: 3rem;
-    color: white;
-}
-
 .main-text {
-    font-size: 3rem;
-    color: var(--medium-spring-cyan);
+    color: var(--text-color-green);
+    font-size: 2.5rem;
 }
+
+.main-text-phrase {
+    font-size: 2.5rem;
+    color: var(--text-color-green);
+
+}
+
 .sec-text {
     font-size: 1.25rem;
-    color: var(--mint-gray);
+    color: var(--sec-text);
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-}
 
 .karla-text {
   font-family: "Karla", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  color: var(--mint-gray);
+  color: var(--text-color-ligth);
+}
+
+
+.btn-container {
+    padding: 20px 0;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
 }
 
 .main-btn {
     font-size: 14px;
-    padding: 15px 4px;
-    border-radius: 30px;
+    padding: 15px 10px;
+    border-radius: 20px;
     font-weight: bold;
-    background-color: var(--emerald);
+    background-color: var(--text-color-btn);
     color: white;
     border: none;
     box-shadow:
@@ -91,26 +107,24 @@ main {
 
 }
 
-.btn-container {
-    padding: 40px;
-}
-
 .pass-container {
-    margin: 50px auto;
-    padding: 5px;
+    margin: 20px 0px;
+    padding: 20px 0;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: 20px;
 }
 
 .field-text {
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 12px 20px;
-    background-color: var(--dark-slate);
-    color: var(--mint-gray);
+    background-color: var(--bg-color-input);
+    color: var(--text-color-input);
+    margin: 20px 0px;
+
 }
 
 .number-input {
@@ -118,8 +132,8 @@ main {
     border-radius: 5px;
     margin: 15px 0 20px 15px;
     padding: 5px;
-    background-color: var(--dark-slate);
-    color: var(--mint-gray);
+    background-color: var(--bg-color-body);
+    color: var(--text-color-ligth);
     font-size: 1rem;
 
 }

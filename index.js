@@ -47,10 +47,6 @@ const lengthInput = document.getElementById("pass-length")
 const passOneEl = document.getElementById("pass-1")
 const passTwoEl = document.getElementById("pass-2")
 
-
-
-
-
 generatebtn.addEventListener("click", function () {
   let passwordLength = parseInt(lengthInput.value)
 
@@ -62,9 +58,24 @@ generatebtn.addEventListener("click", function () {
     console.log("Contraseña generada:", newPasswordOne)
     console.log("Contraseña generada:", newPasswordTwo)
 
-
   } catch (error) {
     console.log(error.message)
+  }
+
+})
+
+const themeSelect = document.getElementById("theme-select")
+const mainContainer = document.querySelector("main")
+
+themeSelect.addEventListener("change", function (event) {
+  const selectedOption = event.target.value
+
+  if (selectedOption === "ligth-theme") {
+
+    mainContainer.classList.add("ligth-theme")
+
+  } else {
+    mainContainer.classList.remove("ligth-theme")
 
   }
 
