@@ -1,0 +1,132 @@
+:root{
+    --navy-blue: #1B244A;
+    --light-red: #F94F6D;
+    --periwinkle: #9AABD8;
+    --led-yellow: #F9D030;
+    --yale-blue: #105173;
+    --emerald: #10B981;
+    --dark-slate: #1F2937;
+    --dark-blue-gray: #2F3E53;
+    --mint-gray: #ECFDF5;
+    --medium-spring-cyan: #4ADF86;
+    --light-blue-gray: #A1B4CC;
+    --steel-blue: #4F627C;
+
+}
+
+.flex-column-container {
+    margin: 50px auto;
+    text-align: center;
+    background-color: var(--dark-blue-gray);
+    width: 600px;
+    min-width: 500px;
+    max-width: 900px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+
+body {
+    margin: 0;
+    text-align: center;
+    background-color: var(--dark-slate);
+}
+
+.flex-row-container {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+
+#main-text-word {
+    font-size: 3rem;
+    color: white;
+}
+
+.main-text {
+    font-size: 3rem;
+    color: var(--medium-spring-cyan);
+}
+.sec-text {
+    font-size: 1.25rem;
+    color: var(--mint-gray);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.karla-text {
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: var(--mint-gray);
+}
+
+.main-btn {
+    font-size: 14px;
+    padding: 15px 4px;
+    border-radius: 30px;
+    font-weight: bold;
+    background-color: var(--emerald);
+    color: white;
+    border: none;
+    box-shadow:
+    0 5px 0 #10B981,              /* 3D button depth side */
+    0 8px 15px rgba(0, 0, 0, 0.4); /* Bottom shadow drop */
+    cursor: pointer;
+    transition: all 0.1s ease;
+    outline: none;
+    max-width: 80%;
+    white-space: normal;
+
+}
+
+.btn-container {
+    padding: 40px;
+}
+
+.pass-container {
+    margin: 50px auto;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.field-text {
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    background-color: var(--dark-slate);
+    color: var(--mint-gray);
+}
+
+.number-input {
+    border: none;
+    border-radius: 5px;
+    margin: 15px 0 20px 15px;
+    padding: 5px;
+    background-color: var(--dark-slate);
+    color: var(--mint-gray);
+    font-size: 1rem;
+
+}
+
+#theme-container {
+    display: flex;
+    flex-direction: column;
+    align-items: self-end;
+    justify-content: end;
+}
