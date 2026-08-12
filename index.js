@@ -81,20 +81,24 @@ themeSelect.addEventListener("change", function (event) {
 
 })
 
-function copyToClipboard(event) {
-  const passwordToCopy = event.target.value
+const passwordCopiedMsg = "Password copied! 📋"
 
-  if (!passwordToCopy) return
+function copyToClipboard(event) {
+
+  const inputEl = event.target
+  const passwordToCopy = inputEl.value
+
+  if (!passwordToCopy || passwordToCopy == passwordCopiedMsg) return
 
   navigator.clipboard.writeText(passwordToCopy)
     .then(() => {
       console.log("Password copied!: ", passwordToCopy)
       const originalValue = event.target.value
-      event.target.value = "Copied!"
+      event.target.value = passwordCopiedMsg
 
       setTimeout(() => {
-        event.target.value = originalValue
-      }, 1000)
+        inputEl.value = passwordToCopy
+      }, 1200)
 
     })
 
