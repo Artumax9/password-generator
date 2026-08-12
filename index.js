@@ -80,3 +80,31 @@ themeSelect.addEventListener("change", function (event) {
   }
 
 })
+
+function copyToClipboard(event) {
+  const passwordToCopy = event.target.value
+
+  if (!passwordToCopy) return
+
+  navigator.clipboard.writeText(passwordToCopy)
+    .then(() => {
+      console.log("Password copied!: ", passwordToCopy)
+      const originalValue = event.target.value
+      event.target.value = "Copied!"
+
+      setTimeout(() => {
+        event.target.value = originalValue
+      }, 1000)
+
+    })
+
+    .catch((error) => {
+      console.log("Error while attempting to copy the password: ", error)
+    }
+    )
+
+}
+
+passOneEl.addEventListener("click", copyToClipboard)
+passTwoEl.addEventListener("click", copyToClipboard)
+
