@@ -2,7 +2,7 @@
     --text-color-green: #10B981; /*emerald:*/
     --bg-color-body: #1F2937; /* dark-slate */
     --bg-color-main: #2F3E53; /*dark-blue-gray*/
-    --text-color-ligth: #ECFDF5; /*--mint-gray:*/
+    --text-color-light: #ECFDF5; /*--mint-gray:*/
     --main-text-color: #4ADF86;/* --spring-green */
     --sec-text: #808080;
     --bg-color-input: #273549;/* deep navy or slate blue color*/
@@ -12,11 +12,11 @@
 
 }
 
-.ligth-theme {
+.light-theme {
     --bg-color-body: white;
     --bg-color-main: #ECFDF5; /*mint green or grayish cyan*/
     --text-color-green: #0C090A; /*nigth:* */
-    --text-color-ligth: #10B981; /*--night color:*/
+    --text-color-light: #10B981; /*--night color:*/
     --main-text-color: #4ADF86;/* --spring-green */
     --sec-text:#6B7280;
     --bg-color-input: #273549;/* deep navy or slate blue color*/
@@ -83,7 +83,7 @@ body {
   font-family: "Karla", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  color: var(--text-color-ligth);
+  color: var(--text-color-light);
 }
 
 
@@ -141,7 +141,7 @@ body {
     margin: 15px 0 20px 15px;
     padding: 5px;
     background-color: var(--bg-color-body);
-    color: var(--text-color-ligth);
+    color: var(--text-color-light);
     font-size: 1rem;
 
 }

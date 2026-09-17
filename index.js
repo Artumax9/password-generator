@@ -67,12 +67,12 @@ const mainContainer = document.querySelector("main")
 themeSelect.addEventListener("change", function (event) {
   const selectedOption = event.target.value
 
-  if (selectedOption === "ligth-theme") {
+  if (selectedOption === "light-theme") {
 
-    mainContainer.classList.add("ligth-theme")
+    mainContainer.classList.add("light-theme")
 
   } else {
-    mainContainer.classList.remove("ligth-theme")
+    mainContainer.classList.remove("light-theme")
 
   }
 
