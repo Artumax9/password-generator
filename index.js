@@ -1,5 +1,5 @@
 
-function generatePasswords(length = 12) {
+export function generatePasswords(length = 12) {
   if (typeof length !== "number") {
     throw new Error("Length must be a number")
   }
@@ -15,18 +15,15 @@ function generatePasswords(length = 12) {
   password += symbols.charAt(Math.floor(Math.random() * symbols.length))
   for (let i = 0; i < length - 2; i++) {
     password += allChars.charAt(Math.floor(Math.random() * allChars.length)) // Add a random character from the characters string
-    console.log(password.length)
-    console.log(password)
   }
   let passwordArray = password.split("")
   passwordArray = shuffleArray(passwordArray)
   password = passwordArray.join("")
-  console.log(password)
   return password
 
 }
 
-function shuffleArray(passwordArray) {
+export function shuffleArray(passwordArray) {
   // Empezamos desde el último elemento y vamos hacia atrás
   for (let i = passwordArray.length - 1; i > 0; i--) {
 
@@ -55,8 +52,6 @@ generatebtn.addEventListener("click", function () {
     const newPasswordTwo = generatePasswords(passwordLength)
     passOneEl.value = newPasswordOne
     passTwoEl.value = newPasswordTwo
-    console.log("Contraseña generada:", newPasswordOne)
-    console.log("Contraseña generada:", newPasswordTwo)
 
   } catch (error) {
     console.log(error.message)
@@ -92,8 +87,6 @@ function copyToClipboard(event) {
 
   navigator.clipboard.writeText(passwordToCopy)
     .then(() => {
-      console.log("Password copied!: ", passwordToCopy)
-      const originalValue = event.target.value
       event.target.value = passwordCopiedMsg
 
       setTimeout(() => {
