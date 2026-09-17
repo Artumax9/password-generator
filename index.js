@@ -1,6 +1,6 @@
 
 export function generatePasswords(length = 12) {
-  if (typeof length !== "number") {
+  if (typeof length !== "number" || Number.isNaN(length)) {
     throw new Error("Length must be a number")
   }
   if (length < 8 || length > 20) {
@@ -43,6 +43,7 @@ const generatebtn = document.querySelector(".main-btn")
 const lengthInput = document.getElementById("pass-length")
 const passOneEl = document.getElementById("pass-1")
 const passTwoEl = document.getElementById("pass-2")
+const lengthErrorEl = document.getElementById("length-error")
 
 generatebtn.addEventListener("click", function () {
   let passwordLength = parseInt(lengthInput.value)
@@ -52,9 +53,10 @@ generatebtn.addEventListener("click", function () {
     const newPasswordTwo = generatePasswords(passwordLength)
     passOneEl.value = newPasswordOne
     passTwoEl.value = newPasswordTwo
+    lengthErrorEl.textContent = ""
 
   } catch (error) {
-    console.log(error.message)
+    lengthErrorEl.textContent = error.message
   }
 
 })

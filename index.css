@@ -71,6 +71,13 @@ body {
     color: var(--sec-text);
 }
 
+.error-text {
+    font-size: 1rem;
+    color: #F87171;
+    min-height: 1.25rem;
+    margin: 4px 0 0;
+}
+
 
 .karla-text {
   font-family: "Karla", sans-serif;
