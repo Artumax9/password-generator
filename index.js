@@ -79,6 +79,7 @@ themeSelect.addEventListener("change", function (event) {
 })
 
 const passwordCopiedMsg = "Password copied! 📋"
+const copyStatusEl = document.getElementById("copy-status")
 
 function copyToClipboard(event) {
 
@@ -89,7 +90,8 @@ function copyToClipboard(event) {
 
   navigator.clipboard.writeText(passwordToCopy)
     .then(() => {
-      event.target.value = passwordCopiedMsg
+      inputEl.value = passwordCopiedMsg
+      copyStatusEl.textContent = "Password copied to clipboard"
 
       setTimeout(() => {
         inputEl.value = passwordToCopy
@@ -98,12 +100,20 @@ function copyToClipboard(event) {
     })
 
     .catch((error) => {
-      console.log("Error while attempting to copy the password: ", error)
-    }
-    )
+      copyStatusEl.textContent = "Could not copy the password"
+      console.error("Error while attempting to copy the password: ", error)
+    })
 
 }
 
+function handleCopyKeydown(event) {
+  if (event.key === "Enter") {
+    copyToClipboard(event)
+  }
+}
+
 passOneEl.addEventListener("click", copyToClipboard)
+passOneEl.addEventListener("keydown", handleCopyKeydown)
 passTwoEl.addEventListener("click", copyToClipboard)
+passTwoEl.addEventListener("keydown", handleCopyKeydown)
 

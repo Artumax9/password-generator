@@ -42,9 +42,12 @@
             <hr>
         </div>
         <div class="pass-container">
-            <input id="pass-1" type="text" class="sec-text  field-text karla-text" placeholder="password" readonly>
-            <input id="pass-2" type="text" class="sec-text  field-text karla-text" placeholder="password" readonly>
+            <input id="pass-1" type="text" class="sec-text  field-text karla-text" placeholder="password" readonly
+                aria-label="Generated password 1, press Enter or click to copy">
+            <input id="pass-2" type="text" class="sec-text  field-text karla-text" placeholder="password" readonly
+                aria-label="Generated password 2, press Enter or click to copy">
         </div>
+        <p id="copy-status" class="sr-only" aria-live="polite"></p>
 
         <hr>
 
